@@ -1,0 +1,16 @@
+C:\Users\0759\RiderProjects\TaskTwo\TaskTwo\bin\Debug\net6.0\TaskTwo.exe
+C:\Users\0759\RiderProjects\TaskTwo\TaskTwo\bin\Debug\net6.0\TaskTwo.deps.json
+C:\Users\0759\RiderProjects\TaskTwo\TaskTwo\bin\Debug\net6.0\TaskTwo.runtimeconfig.json
+C:\Users\0759\RiderProjects\TaskTwo\TaskTwo\bin\Debug\net6.0\TaskTwo.dll
+C:\Users\0759\RiderProjects\TaskTwo\TaskTwo\bin\Debug\net6.0\TaskTwo.pdb
+C:\Users\0759\RiderProjects\TaskTwo\TaskTwo\obj\Debug\net6.0\TaskTwo.csproj.AssemblyReference.cache
+C:\Users\0759\RiderProjects\TaskTwo\TaskTwo\obj\Debug\net6.0\TaskTwo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\0759\RiderProjects\TaskTwo\TaskTwo\obj\Debug\net6.0\TaskTwo.AssemblyInfoInputs.cache
+C:\Users\0759\RiderProjects\TaskTwo\TaskTwo\obj\Debug\net6.0\TaskTwo.AssemblyInfo.cs
+C:\Users\0759\RiderProjects\TaskTwo\TaskTwo\obj\Debug\net6.0\TaskTwo.csproj.CoreCompileInputs.cache
+C:\Users\0759\RiderProjects\TaskTwo\TaskTwo\obj\Debug\net6.0\TaskTwo.dll
+C:\Users\0759\RiderProjects\TaskTwo\TaskTwo\obj\Debug\net6.0\refint\TaskTwo.dll
+C:\Users\0759\RiderProjects\TaskTwo\TaskTwo\obj\Debug\net6.0\TaskTwo.pdb
+C:\Users\0759\RiderProjects\TaskTwo\TaskTwo\obj\Debug\net6.0\TaskTwo.genruntimeconfig.cache
+C:\Users\0759\RiderProjects\TaskTwo\TaskTwo\obj\Debug\net6.0\ref\TaskTwo.dll
+C:\Users\0759\RiderProjects\TaskTwo\TaskTwo\bin\Debug\net6.0\text.txt
