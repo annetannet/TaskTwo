@@ -29,29 +29,19 @@ namespace TaskTwo
             {
                 var index = i / ByteSize;
                 if (char.IsUpper(text[i]) && AllRulesBroken(text, i))
+                {
                     positions[index] += (byte)(1 << (ByteSize - 1 - i % ByteSize));
+                }
             }
 
-            var entropy = GetEntropy(positions);
-            Console.WriteLine($"Entropy: {entropy}.");
-
-            new ArithmeticEncoder(12).Encode(positions);
+            for (int i = 8; i < 33; i++)
+            {
+                Console.WriteLine($"Window - {i}.");
+                new ArithmeticEncoder(i).Encode(positions);
+            }
 
             var contextModels = GetContextModels(text);
             Console.WriteLine($"ContextModels size: {GetSize(contextModels.Values)} bytes.");
-        }
-
-        private static double GetEntropy(byte[] bytes)
-        {
-            var bytesCount = new int[256];
-            foreach (var b in bytes)
-                bytesCount[b]++;
-
-            return bytesCount
-                .Where(i => i != 0)
-                .Select(i => i / (double)bytes.Length)
-                .Select(probability => probability * -Math.Log2(probability))
-                .Sum();
         }
 
         private static long GetSize(IEnumerable<ContextModel> models)

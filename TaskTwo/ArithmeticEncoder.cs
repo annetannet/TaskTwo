@@ -6,15 +6,15 @@ namespace TaskTwo
 {
     public class ArithmeticEncoder
     {
-        private readonly int encodingWindow;
-        private readonly ulong intervalExpansion; // 2 ^ (EncodingWindow - 1)
-        private readonly ulong maxValue; // 2 ^ EncodingWindow
+        private readonly int n;
+        private readonly ulong intervalExpansion; // 2 ^ (N - 1)
+        private readonly ulong maxValue; // 2 ^ N
 
         public ArithmeticEncoder(int window)
         {
-            encodingWindow = window;
-            intervalExpansion = (ulong)Math.Pow(2, encodingWindow - 1);
-            maxValue = (ulong)Math.Pow(2, encodingWindow);
+            n = window;
+            intervalExpansion = (ulong)Math.Pow(2, n - 1);
+            maxValue = (ulong)Math.Pow(2, n);
         }
 
         public byte[] Encode(byte[] source)
@@ -42,8 +42,8 @@ namespace TaskTwo
                 if (offset >= result.Count)
                     result.Add(0);
                 (l, h) = Project(counter, b, l, h);
-                var off = (ulong)1 << (encodingWindow - 1);
-                if ((l & off) != (h & off))
+                var off = (ulong)1 << (n - 1);
+                if ((l & off) == 0 && (h & off) == off)
                 {
                     bits = GetBits(l, h);
                     for (var i = 0; i < bits; i++)
@@ -69,7 +69,7 @@ namespace TaskTwo
 
                     bits = 0;
 
-                    for (var i = encodingWindow - 2; i >= 0; i--)
+                    for (var i = n - 2; i >= 0; i--)
                     {
                         if ((l & off) != (h & off))
                             break;
@@ -106,12 +106,12 @@ namespace TaskTwo
 
         private int GetBits(ulong l, ulong h)
         {
-            var offset = encodingWindow - 2;
+            var offset = n - 2;
             var counter = 0;
             while (offset >= 0)
             {
                 var o = (ulong)1 << offset;
-                if ((l & o) != (h & o))
+                if ((l & o) == o && (h & o) == 0)
                     counter++;
                 else
                     break;
